@@ -14,7 +14,7 @@ const sounds = {
   },
   lion: {
     fileName: 'lion.wav',
-    label: 'Lion'
+    label: 'Lewis the Lion'
   }
 };
 for (const sound in sounds) {
