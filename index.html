@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Groovy Interval Timer</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script src="timer.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="subcontainer" id="container-timer">
+      <h3>Current Timer</h3>
+      <div id="timer">
+        0:00
+      </div>
+      <div id="next-interval">
+
+      </div>
+    </div>
+    <div class="subcontainer" id="container-control">
+      <h3>Adjust Timer</h3>
+      <label for="interval">
+        Interval:
+        <select id="interval" name="interval">
+          <option value="1">Every minute</option>
+          <option value="5">Every 5 minutes</option>
+          <option value="10">Every 10 minutes</option>
+          <option value="15">Every 15 minutes</option>
+          <option value="30">Every 30 minutes</option>
+          <option value="60">Every 60 minutes</option>
+        </select>
+      </label>
+      <button id="toggle" type="button" onClick="toggleTimer()">
+        Smash
+      </button>
+    </div>
+  </div>
+  <footer>
+    <div id="audio-control">
+      <select id="sound-name" name="sound-name">
+      </select>
+      <label for="volume-slider">Volume:</label>
+      <input id="volume-slider" type="range" min="0" max="1" step="0.1">
+      <p id="volume-label"></p>
+    </div>
+    <button id="dark-mode" type="button" onClick="toggleDarkMode()">Dark Mode</button>
+  </footer>
+</body>
+
+</html>
