@@ -106,15 +106,25 @@ const toggleDarkMode = () => {
 
 const getInterval = () => Number(intervalSelect.value)
 
+const setTimerStatus = status => {
+  if (status === 'on') {
+    toggleButton.innerHTML = 'Dash!';
+    toggleButton.style.setProperty('background', '#F4D19B');
+  } else if (status === 'off') {
+    toggleButton.innerHTML = 'Smash!';
+    toggleButton.style.setProperty('background', '#CAF7E3');
+  }
+}
+
 const toggleTimer = () => {
   if (intervalID === null) {
     // Timer is not running, start it
     startTimer();
-    toggleButton.innerHTML = 'Dash';
+    setTimerStatus('on');
   } else {
     // Timer is running, stop it
     stopTimer();
-    toggleButton.innerHTML = 'Smash';
+    setTimerStatus('off');
   }
 }
 
@@ -166,3 +176,4 @@ setColorScheme('light');
 setVolumeLabel(volumeSlider.value);
 populateSounds();
 setSound();
+setTimerStatus('off');
