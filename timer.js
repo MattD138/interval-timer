@@ -15,6 +15,18 @@ const sounds = {
   lion: {
     fileName: 'lion.wav',
     label: 'Lewis the Lion'
+  },
+  doot: {
+    fileName: 'doot.mp3',
+    label: 'Doot'
+  },
+  screamingSheep: {
+    fileName: 'screaming-sheep.mp3',
+    label: 'Screaming Sheep'
+  },
+  seinfeld: {
+    fileName: 'seinfeld-transition.mp3',
+    label: 'Seinfeld Transition'
   }
 };
 for (const sound in sounds) {
