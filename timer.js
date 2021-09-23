@@ -143,6 +143,7 @@ const toggleTimer = () => {
 const resetTimer = () => {
   intervalID = null;
   timerElement.innerHTML = "0:00";
+  document.title = 'Groovy Interval Timer';
 }
 
 // Add event listener to update timer when user changes dropdown
@@ -171,7 +172,9 @@ const startTimer = () => {
     const minutes = timeRemaining.getMinutes();
     const seconds = String(timeRemaining.getSeconds())
       .padStart(2, '0');
-    timerElement.innerHTML = `${minutes}:${seconds}`;
+    const timerStr = `${minutes}:${seconds}`;
+    timerElement.innerHTML = timerStr;
+    document.title = timerStr;
     const targetTimeStr = new Date(targetTime)
       .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     nextIntervalElement.innerHTML = `Next interval: ${targetTimeStr}`;
